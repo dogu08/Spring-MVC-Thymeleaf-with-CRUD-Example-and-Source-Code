@@ -1,0 +1,156 @@
+/* Genel yapı */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #e0eafc);
+    color: #333;
+    font-size: 1.1vw;
+}
+
+/* Üst navigasyon */
+.topnav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeSlideDown 0.8s ease-in-out;
+}
+
+.topnav a {
+    color: #333;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 1.2vw;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #eaeaea;
+    color: #000;
+}
+
+.topnav a.active {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* İçerik kutuları */
+.all-browsers {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    animation: fadeSlideUp 0.8s ease-in-out;
+}
+
+.all-browsers > h1 {
+    text-align: center;
+    font-size: 2vw;
+    color: #222;
+}
+
+.browser {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.browser > h2 {
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.browser > p {
+    font-size: 1vw;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 15px;
+    background-color: #ff8c69;
+    color: white;
+    font-size: 1vw;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablo stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    animation: fadeInTable 0.5s ease-in-out;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 12px;
+    font-size: 1vw;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #eaf1f8;
+    transition: background-color 0.3s;
+}
+
+/* Animasyonlar */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive font ayarlamaları */
+@media (max-width: 768px) {
+    .topnav a {
+        font-size: 3.5vw;
+        padding: 12px 10px;
+    }
+
+    .browser > h2, .browser > p, footer, td, th {
+        font-size: 3vw;
+    }
+
+    .all-browsers > h1 {
+        font-size: 4vw;
+    }
+}
